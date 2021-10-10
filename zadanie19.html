@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Zadanie 19</title>
+<meta charset="UTF-8">
+<script language="JavaScript">
+function pole_radchenko(a_rad,b_rad)
+{
+ a_rad=parseFloat(a_rad);
+ b_rad=parseFloat(b_rad);
+ pole_wynik_rad=a_rad*b_rad;
+ document.getElementsByName('wprowadz_pole_rad')[0].value=pole_wynik_rad.toFixed(2);
+ alert("Pc="+pole_wynik_rad.toFixed(2)+" cm^2");
+ pole.innerHTML="Pc="+pole_wynik_rad.toFixed(2)+" cm^2"+"<br>";
+}
+function obwod_rad(a_rad,b_rad)
+{
+ a_rad=parseFloat(a_rad);
+ b_rad=parseFloat(b_rad);
+ obwod_rad=2*a_rad+2*b_rad;
+ document.getElementsByName('wprowadz_obw_rad')[0].value=obwod_rad.toFixed(2);
+ alert("Obwod="+obwod_rad.toFixed(2)+" cm");
+ obw.innerHTML="Obwód="+obwod_rad.toFixed(2)+" cm";
+}
+</script>
+</head>
+<body>
+Obliczanie pola oraz obwodu prostokąta
+<br>
+<br>
+<form name="formularz" action="..." onsubmit="pole_radchenko(this.a_dana_rad.value,this.b_dana_rad.value);
+obwod_rad(this.a_dana_rad.value,this.b_dana_rad.value);return false">
+Podaj a=
+<input size="6" name="a_dana_rad">
+Podaj b=
+<input size="6" name="b_dana_rad">
+<br>
+<br>
+<input type="submit" Value="oblicz" >
+<br>
+<br>
+Pole=
+<input size="6" name="wprowadz_pole_rad">
+Obwód=
+<input size="6" name="wprowadz_obw_rad">
+</form>
+<table>
+<tr id="pole"></tr>
+<tr id="obw"></tr>
+</table>
+</body>
+</html>
