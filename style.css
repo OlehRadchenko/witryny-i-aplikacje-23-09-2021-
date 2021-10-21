@@ -261,7 +261,7 @@ html,body{
     position: static;
     /*background-color: slategray;*/
     background-image: url(tlo-link.png);
-    width: 60%;
+    width: 85%;
     height: 800px;
     border-radius: 20px;
 }
@@ -307,7 +307,7 @@ html,body{
     position: static;
     /*background-color: slategray;*/
     background-image: url(tlo-zad.png);
-    width: 60%;
+    width: 85%;
     height: 100%;
     border-radius: 20px;
 }
