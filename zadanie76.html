@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 76</title>
+</head>
+<body>
+    <script language="JavaScript">
+        var a=prompt("Wpisz liczbę = ","");
+        var b=prompt("Wpisz liczbę = ","");
+        a = parseFloat(a);
+        b = parseFloat(b);
+        if(b==a){
+            confirm("Źle wprowadziłeś dane ;c");
+        }else if(a>b){
+        for(j=a;j>=b;j--){  
+            if(j%2==1){
+                document.write("Liczba nie parzysta od największej: "+j+"<br>");
+            }
+        }
+    }else if(b>a){
+        for(j=a;j<=b;j++){  
+            if(j%2==1){
+                document.write("Liczba nie parzysta od najmniejszej "+j+"<br>");
+            }
+    }
+}
+
+        function okno_zamknij_radchenko_kod()
+{
+window.close()
+}
+    </script>
+    <br/>
+    <br/>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_radchenko_kod()"/>
+</body>
+</html>

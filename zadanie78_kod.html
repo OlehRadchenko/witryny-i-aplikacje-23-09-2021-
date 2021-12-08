@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>Zadanie 78-kod</title>
+<script type="text/javascript">
+function okno_zamknij_radchenko_kod()
+{
+window.close()
+}
+</script>
+</head>
+
+<body>
+<textarea cols="180" rows="130">
+    <html>
+        <head>
+        <meta charset="UTF-8">
+        <script language="JavaScript">
+        var R1=2.01;
+        var R2=4.50;
+        var R3=121;
+        var R4=1021;
+        var licznik_rad1=0;
+        var licznik_rad2=0;
+        var licznik_rad3=0;
+        var licznik_rad4=0;
+        for( i= -Math.round(R1)-1;i<=R1;i++){
+            for( j= -Math.round(R1)-1; j<=R1; j++){
+            var d1=Math.sqrt(i*i+j*j);
+            if(d1<=R1){
+            licznik_rad1+=1;
+            }
+        }
+        }
+        /*document.write(licznik_rad1+"<br>");*/
+        
+        
+        for( i= -Math.round(R2)-1;i<=R2;i++){
+            for( j= -Math.round(R2)-1; j<=R2; j++){
+            var d2=Math.sqrt(i*i+j*j);
+            if(d2<=R2){
+            licznik_rad2+=1;
+            }
+        }
+        }
+        /*document.write(licznik_rad2+"<br>");*/
+        
+        
+        for( i= -Math.round(R3)-1;i<=R3;i++){
+            for( j= -Math.round(R3)-1; j<=R3; j++){
+            var d3=Math.sqrt(i*i+j*j);
+            if(d3<=R3){
+            licznik_rad3+=1;
+            }
+        }
+        }
+        /*document.write(licznik_rad3+"<br>");*/
+        
+        
+        for( i= -Math.round(R4);i<=R4;i++){
+            for( j= -Math.round(R4); j<=R4; j++){
+            var d4=Math.sqrt(i*i+j*j);
+            if(d4<=R4){
+            licznik_rad4+=1;
+            }
+        }
+        }
+        /*document.write(licznik_rad4+"<br>");*/
+        
+        
+        function okno_zamknij_radchenko_kod()
+        {
+        window.close()
+        }
+        </script>
+        </head>
+        
+        <body>
+        <table border="1";>
+        <tr>
+        <td>
+        <h1>Promień koła R</h1>
+        </td>
+        <td>
+        <h1>Liczba punktów kratowych N(R)</h1>
+        </td>
+        </tr>
+        
+        <tr>
+        <td>
+        2,01
+        </td>
+        <td>
+        <script>document.write(licznik_rad1);</script>
+        </td>
+        </tr>
+        
+        
+        <tr>
+        <td>
+        4,50
+        </td>
+        <td>
+        <script>document.write(licznik_rad2);</script>
+        </td>
+        </tr>
+        
+        
+        <tr>
+        <td>
+        100+numer_w_dzienniku
+        </td>
+        <td>
+        <script>document.write(licznik_rad3);</script>
+        </td>
+        </tr>
+        
+        <tr>
+        <td>
+        1000+numer_w_dzienniku
+        </td>
+        <td>
+        <script>document.write(licznik_rad4);</script>
+        </td>
+        </tr>
+        </table>
+        <br>
+        <br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_radchenko_kod()"/>
+        </body>
+        </html>
+</textarea>
+<br/>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_radchenko_kod()"/>
+</body>
+</html>
