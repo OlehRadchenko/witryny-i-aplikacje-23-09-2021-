@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Zadanie na ocene</title>
+</head>
+<body>
+    <div style="font-size: 35px;">
+        <script>
+            var a_radc = prompt("Podaj a:","");
+            var a_radc = parseFloat(a_radc);
+            var b_radc = prompt("Podaj b:","");
+            var b_radc = parseFloat(b_radc);
+            var c_radc = prompt("Podaj c:","");
+            var c_radc = parseFloat(c_radc);
+            var delta_radc = (Math.pow(b_radc,2)) - ((4 * a_radc) * c_radc);
+
+            function postac_kanoniczna(delta_radc, b_radc, a_radc)
+            {
+                var p_radc = (-b_radc / (2 * a_radc)).toFixed(2);
+                var q_radc = (-delta_radc / (4 * a_radc)).toFixed(2);
+
+                document.write("Wartość p jest równa : " + p_radc + "<br>" + "Wartość q jest równa : " + q_radc + "<br>");
+                if(p_radc < 0 && q_radc < 0)
+                {
+                    document.write("Postac kanoniczna : f(x) = " + a_radc + "(x +" + Math.abs(p_radc) + ")^2 " + q_radc + "<br>");
+                }
+                else if(p_radc < 0 && q_radc > 0)
+                {
+                    document.write("Postac kanoniczna : f(x) = " + a_radc + "(x +" + Math.abs(p_radc) + ")^2 +" + q_radc + "<br>");
+                }
+                else if(q_radc < 0 && p_radc > 0)
+                {
+                    document.write("Postac kanoniczna : f(x) = " + a_radc + "(x -" + p_radc + ")^2 " + q_radc + "<br>");
+                }
+                else
+                {
+                    document.write("Postac kanoniczna : f(x) = " + a_radc + "(x -" + p_radc + ")^2 + " + q_radc + "<br>");
+                }
+            }
+
+            function postac_iloczynowa(delta_radc, b_radc, a_radc) {
+                var x1_radc, x2_radc, x0_radc;
+                if (delta_radc > 0) {
+                    x1_radc = ((-b_radc - Math.sqrt(delta_radc)) / (2 * a_radc)).toFixed(2);
+                    x2_radc = ((-b_radc + Math.sqrt(delta_radc)) / (2 * a_radc)).toFixed(2); 
+                    
+                    document.write("Wartość x1 to : " + x1_radc + "<br>" + "Wartość x2 to : " + x2_radc + "<br>");
+
+                    if (x2_radc < 0 && x1_radc < 0) {
+                        document.write("Postac iloczynowa : f(x) = " + a_radc + "(x +" + Math.abs(x1_radc) + ")(x +" + Math.abs(x2_radc) + ")" + "<br>");
+                    }
+                    else if (x1_radc < 0 && x2_radc > 0) {
+                        document.write("Postac iloczynowa : f(x) = " + a_radc + "(x +" + Math.abs(x1_radc) + ")(x " + x2_radc + ")" + "<br>");
+                    }
+                    else if (x2_radc < 0 && x1_radc > 0) {
+                        document.write("Postac iloczynowa : f(x) = " + a_radc + "(x " + x1_radc + ")(x +" + Math.abs(x2_radc) + ")" + "<br>");
+                    }
+                    else {
+                        document.write("Postac iloczynowa : f(x) = " + a_radc + "(x - " + x1_radc + ")(x - " + x2_radc + ")" + "<br>");
+                    }
+                }
+                else if (delta_radc == 0) {
+                    x0_radc = (-b_radc / (2 * a_radc)).toFixed(2);
+
+                    document.write("Wartość x0 to : " + x0_radc + "<br>");
+                    if (x0_radc < 0) {
+                        document.write("Postac iloczynowa : f(x) = " + a_radc + "(x +" + Math.abs(x0_radc) + ")^2" + "<br>");
+                    }else
+                    {
+                        document.write("Postac iloczynowa: f(x) = " + a_radc + "(x - " + x0_radc + ")^2" + "<br>");
+                    }
+                }
+                else{
+                    document.write("Postac iloczynowa: nie ma ;c"+"<br>");
+                }
+            }
+
+            document.write("a jest równe : " + a_radc + "<br> b jest równe : " + b_radc + "<br> c jest równe : " + c_radc + "<br>");
+            document.write("Delta jest równa : " + delta_radc + "<br>" + "<br>");
+            
+            if (b_radc < 0 && c_radc < 0) {
+                document.write("Postac ogolna : f(x) = " + a_radc + " * x^2 " + b_radc + " * x " + c_radc + "<br>");
+            }
+            else if (b_radc < 0 && c_radc > 0) {
+                document.write("Postac ogolna : f(x) = " + a_radc + " * x^2 " + b_radc + " * x + " + c_radc + "<br>");
+            }
+            else if (c_radc < 0 && b_radc > 0) {
+                document.write("Postac ogolna : f(x) = " + a_radc + " * x^2 + " + b_radc + " * x " + c_radc + "<br>");
+            }
+            else {
+                document.write("Postac ogolna : f(x) = " + a_radc + " * x^2 + " + b_radc + " * x + " + c_radc + "<br>");
+            }
+
+
+            document.write("<br>");
+            postac_kanoniczna(delta_radc, b_radc, a_radc);
+            document.write("<br>");
+            postac_iloczynowa(delta_radc, b_radc, a_radc);
+
+        </script>
+    </div>
+</body>
+
+</html>
